@@ -1,0 +1,19 @@
+include color
+include image
+
+
+fun nordiske-flagg(bakgrunn, stripe-ver, stripe-hor, top-stripe-ver, top-stripe-hor):
+  frame(
+    underlay(rectangle(264, 192, "solid", bakgrunn),
+      underlay-xy(rectangle(48, 192, "solid", stripe-ver), -72, 0,
+        underlay(rectangle(264, 48, "solid", stripe-hor),
+          underlay-xy(rectangle(24, 192, "solid", top-stripe-ver), -84, 84,
+            (rectangle(264, 24, "solid", top-stripe-hor)))))))
+end
+
+sverige = nordiske-flagg("blue", "yellow", "yellow", "yellow", "yellow")
+norge = nordiske-flagg("firebrick", "white", "white", "dark blue", "dark blue")
+danmark = nordiske-flagg("red", "white", "white", "white", "white")
+finland = nordiske-flagg("white", "blue", "blue", "blue", "blue")
+island = nordiske-flagg("blue", "white", "white", "red", "red")
+faerooyende = nordiske-flagg("white", "blue", "blue", "red", "red")
